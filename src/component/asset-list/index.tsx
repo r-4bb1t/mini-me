@@ -30,7 +30,7 @@ function AssetList({ count, type, title, char, setChar, color, setColor, focus, 
           {[...Array(count)].map((n, i) => (
             <S.Box isSelected={char[type] === i} onClick={(e) => boxClick(i)} key={i}>
               <S.ImageSlice
-                src={`/assets/${type}.png`}
+                src={`process.env.PUBLIC_URL/assets/${type}.png`}
                 index={i}
                 key={i}
                 hue={color[type][0]}
