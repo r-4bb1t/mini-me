@@ -4,7 +4,7 @@ import { BREAKPOINT } from "../../constant";
 export const Layout = styled.div`
   width: 100%;
   height: 100vh;
-  background: #e6a0a0;
+  background: #eee;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,7 +15,6 @@ export const Contents = styled.div`
   width: 100%;
   max-width: 36rem;
   max-height: 100vh;
-  background: #e6a0a0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,6 +29,8 @@ export const ResultContainer = styled.div`
   width: 36rem;
   height: 36rem;
   background: #fff;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 `;
 
 export const AssetListContainer = styled.div`

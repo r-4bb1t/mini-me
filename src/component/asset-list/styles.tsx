@@ -13,16 +13,17 @@ export const Title = styled.div`
   align-items: center;
   width: 100%;
   height: 3rem;
-  //font-weight: 700;
+  font-weight: 800;
   font-size: 1.4rem;
-  background-color: #ddd;
+  background-color: #eee;
+  border-bottom: 1px solid #ddd;
 `;
 
 export const BoxContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  background-color: #eee;
+  background-color: #ddd;
 `;
 
 interface BoxProps {

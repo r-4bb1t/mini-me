@@ -12,7 +12,7 @@ export const Layout = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background: #ddd;
+  background: #fff;
   padding-top: 1rem;
   padding-bottom: 1rem;
 `;
@@ -28,12 +28,14 @@ export const RangeInput = styled.input<SliderProps>`
   -webkit-appearance: none;
   background: transparent;
   outline: none;
+  border-bottom: 1px solid #ddd;
   ::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: 2.4rem;
     margin-top: -0.2rem;
     width: 1rem;
-    background-color: white;
+    background-color: #ddd;
+    border-bottom: 1px solid #ccc;
     cursor: pointer;
   }
   ::-webkit-slider-runnable-track {
