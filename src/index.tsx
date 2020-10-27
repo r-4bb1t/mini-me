@@ -9,8 +9,9 @@ import { BrowserRouter } from "react-router-dom";
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyle />
-    <BrowserRouter basename="/mini-me" />
-    <App />
+    <BrowserRouter basename="/mini-me">
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
