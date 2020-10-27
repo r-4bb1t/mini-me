@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components/macro";
 
 const GlobalStyle = createGlobalStyle`
-  @font-face {
   * {
     font-family: 'NanumSquare', sans-serif;
     font-display: 'block';
