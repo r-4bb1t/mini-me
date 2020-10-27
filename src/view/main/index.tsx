@@ -23,6 +23,7 @@ function Main() {
     reRender(!r);
   };
   const setColor = (type: number, h: number, s: number, l: number) => {
+    console.log(process.env.PUBLIC_URL);
     let c = color;
     let n = [h, s, l];
     c[type] = n;

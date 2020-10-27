@@ -6,12 +6,7 @@ import { Route, BrowserRouter as Router, Switch, Redirect } from "react-router-d
 function App() {
   return (
     <>
-      <Router>
-        <Switch>
-          <Route path="/mini-me" exact component={Main} />
-          <Redirect from="*" to="/mini-me" />
-        </Switch>
-      </Router>
+      <Main />
     </>
   );
 }
