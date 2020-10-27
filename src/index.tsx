@@ -4,13 +4,13 @@ import App from "./App";
 import GlobalStyle from "./component/global-style";
 import reportWebVitals from "./reportWebVitals";
 
-import { BrowserRouter } from "react-router-dom";
+import { Route, BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyle />
-    <BrowserRouter basename="/mini-me">
-      <App />
+    <BrowserRouter basename={window.location.pathname || ""}>
+      <Route exact path="/" component={App} />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
