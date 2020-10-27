@@ -14,7 +14,7 @@ function Result({ count, char, color }: ResultProps) {
         <S.BoxContainer>
           {[...Array(count)].map((n, i) => (
             <S.Parts
-              src={`/assets/${i}.png`}
+              src={`${process.env.PUBLIC_URL}/assets/${i}.png`}
               index={char[i]}
               key={i}
               hue={color[i][0]}
