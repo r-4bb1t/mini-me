@@ -5,7 +5,7 @@ import AssetList from "../../component/asset-list";
 import Result from "../../component/result";
 
 function Main() {
-  const [char, updateChar] = useState([0, 0, 0, 0]);
+  const [char, updateChar] = useState([0, 0, 0, 0, 0, 0]);
   const [color, updateColor] = useState([
     [0, 50, 50],
     [0, 50, 50],
