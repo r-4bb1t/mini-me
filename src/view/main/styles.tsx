@@ -23,7 +23,7 @@ export const Contents = styled.div`
   @media screen and (min-width: ${BREAKPOINT}px) {
     max-width: 72rem;
     flex-direction: row;
-  } //이건 출시할땐 지우자.
+  }
 `;
 
 export const ResultContainer = styled.div`
@@ -36,7 +36,7 @@ export const AssetListContainer = styled.div`
   width: 36rem;
   overflow-y: scroll;
   ::-webkit-scrollbar {
-    width: 1px;
+    width: 0px;
   }
   ::-webkit-scrollbar-track {
     display: none;

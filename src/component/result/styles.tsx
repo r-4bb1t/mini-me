@@ -11,8 +11,8 @@ export const Layout = styled.div`
 
 export const BoxContainer = styled.div`
   position: relative;
-  width: 6rem;
-  height: 6rem;
+  width: 18rem;
+  height: 18rem;
 `;
 
 interface PartsProps {
@@ -31,7 +31,7 @@ export const Parts = styled.div<PartsProps>`
   left: 0;
   background-image: url(${(props) => props.src});
   background-repeat: no-repeat;
-  background-position: calc(0px - 60px * ${(props) => props.index});
+  background-position: calc(0px - 180px * ${(props) => props.index});
   filter: hue-rotate(calc(${(props) => props.hue} * 3.6deg)) saturate(calc(${(props) => props.sat}% * 2))
     brightness(calc(${(props) => props.bri}% * 2)) contrast(calc(max(200% - ${(props) => props.bri}% * 2, 100%)));
 `;

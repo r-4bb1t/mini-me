@@ -99,7 +99,7 @@ function Main() {
               updateFocus={updateFocus}
             />
             <AssetList
-              count={5}
+              count={15}
               title="머리"
               type={5}
               key={5}

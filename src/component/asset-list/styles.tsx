@@ -21,6 +21,7 @@ export const Title = styled.div`
 export const BoxContainer = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   background-color: #eee;
 `;
 
@@ -32,9 +33,6 @@ export const Box = styled.div<BoxProps>`
   width: 6rem;
   height: 6rem;
   background-color: ${(props) => (props.isSelected ? "#9af367" : "white")};
-  /* border: 5px solid #777;
-  margin-right: -5px;
-  margin-bottom: -5px; */
 `;
 
 interface ImageSliceProps {
