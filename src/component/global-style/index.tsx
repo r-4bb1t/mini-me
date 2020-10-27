@@ -2,14 +2,8 @@ import { createGlobalStyle } from "styled-components/macro";
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
-    font-family: 'HSSummer';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSSummer.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
   * {
-    //font-family: 'NanumSquare', sans-serif;
-    font-family: 'HSSummer', sans-serif;
+    font-family: 'NanumSquare', sans-serif;
     font-display: 'block';
     box-sizing : border-box;
     -webkit-font-smoothing: antialiased;
