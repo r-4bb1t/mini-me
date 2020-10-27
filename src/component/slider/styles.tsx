@@ -7,12 +7,14 @@ const fadein = keyframes`
 
 export const Layout = styled.div`
   width: 100%;
-  height: 7rem;
+  height: 14rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  background: pink;
+  background: #ddd;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 `;
 
 interface SliderProps {
@@ -28,15 +30,15 @@ export const RangeInput = styled.input<SliderProps>`
   outline: none;
   ::-webkit-slider-thumb {
     -webkit-appearance: none;
-    height: 1.4rem;
+    height: 2.4rem;
     margin-top: -0.2rem;
-    width: 0.5rem;
+    width: 1rem;
     background-color: white;
     cursor: pointer;
   }
   ::-webkit-slider-runnable-track {
     width: 100%;
-    height: 1rem;
+    height: 2rem;
     background: ${(props) =>
       props.index === "hue"
         ? `linear-gradient(
@@ -67,24 +69,3 @@ export const RangeInput = styled.input<SliderProps>`
     )`};
   }
 `;
-
-export const StyledThumb = styled.div`
-  height: 1rem;
-  line-height: 1rem;
-  width: 1rem;
-  text-align: center;
-  background-color: white;
-  border-radius: 50%;
-  cursor: grab;
-  transition: 0.1s;
-  outline: none;
-`;
-
-export const StyledTrack = styled.div`
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  background: red;
-`;
-
-/**/
