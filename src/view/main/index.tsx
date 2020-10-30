@@ -1,5 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import * as S from "./styles";
+import * as htmlToImage from "html-to-image";
+import download from "downloadjs";
+import { toPng } from "html-to-image";
 
 import AssetList from "../../component/asset-list";
 import Result from "../../component/result";
@@ -18,6 +21,8 @@ function Main() {
   ]);
   const [focus, updateFocus] = useState(0);
   const [r, reRender] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
   const setChar = (type: number, i: number) => {
     let c = char;
     c[type] = i;
@@ -32,12 +37,25 @@ function Main() {
     updateColor(c);
     reRender(!r);
   };
+  useEffect(() => {
+    if (ref.current != null && isClicked) {
+      htmlToImage.toPng(ref.current).then(function (dataUrl) {
+        download(dataUrl, "a.png");
+      });
+      setIsClicked(false);
+    }
+  }, [isClicked]);
+  const onButtonClick = () => {
+    setIsClicked(true);
+  };
   return (
     <>
       <S.Layout>
         <S.Contents>
           <S.ResultContainer>
-            <Result count={8} char={char} color={color} />
+            <S.SaveArea ref={ref}>
+              <Result count={8} char={char} color={color} />
+            </S.SaveArea>
           </S.ResultContainer>
           <S.AssetListContainer>
             <AssetList
@@ -137,6 +155,7 @@ function Main() {
               updateFocus={updateFocus}
             />
           </S.AssetListContainer>
+          <S.SaveButton onClick={(e) => onButtonClick()}>저장</S.SaveButton>
         </S.Contents>
       </S.Layout>
     </>
