@@ -32,6 +32,7 @@ export const Parts = styled.div<PartsProps>`
   background-image: url(${(props) => props.src});
   background-repeat: no-repeat;
   background-position: calc(0px - 180px * ${(props) => props.index});
+  transition: 0s;
   filter: hue-rotate(calc(${(props) => props.hue} * 3.6deg)) saturate(calc(${(props) => props.sat}% * 2))
     brightness(calc(${(props) => props.bri}% * 2)) contrast(calc(max(200% - ${(props) => props.bri}% * 2, 100%)));
 `;
