@@ -5,8 +5,9 @@ import AssetList from "../../component/asset-list";
 import Result from "../../component/result";
 
 function Main() {
-  const [char, updateChar] = useState([0, 0, 0, 0, 0, 0, 0]);
+  const [char, updateChar] = useState([0, 0, 0, 0, 0, 0, 0, 0]);
   const [color, updateColor] = useState([
+    [0, 50, 50],
     [0, 50, 50],
     [0, 50, 50],
     [0, 50, 50],
@@ -36,7 +37,7 @@ function Main() {
       <S.Layout>
         <S.Contents>
           <S.ResultContainer>
-            <Result count={7} char={char} color={color} />
+            <Result count={8} char={char} color={color} />
           </S.ResultContainer>
           <S.AssetListContainer>
             <AssetList
@@ -88,7 +89,7 @@ function Main() {
               updateFocus={updateFocus}
             />
             <AssetList
-              count={3}
+              count={6}
               title="입"
               type={4}
               key={4}
@@ -116,6 +117,18 @@ function Main() {
               title="안경"
               type={6}
               key={6}
+              char={char}
+              setChar={setChar}
+              setColor={setColor}
+              color={color}
+              focus={focus}
+              updateFocus={updateFocus}
+            />
+            <AssetList
+              count={4}
+              title="배경"
+              type={7}
+              key={7}
               char={char}
               setChar={setChar}
               setColor={setColor}

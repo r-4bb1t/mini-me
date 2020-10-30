@@ -20,6 +20,7 @@ function Result({ count, char, color }: ResultProps) {
               hue={color[i][0]}
               sat={color[i][1]}
               bri={color[i][2]}
+              isBackground={i == 7}
             />
           ))}
         </S.BoxContainer>

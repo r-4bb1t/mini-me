@@ -21,9 +21,11 @@ interface PartsProps {
   hue: number;
   sat: number;
   bri: number;
+  isBackground: boolean;
 }
 
 export const Parts = styled.div<PartsProps>`
+  z-index: ${(props) => (props.isBackground ? 0 : 1)};
   width: 100%;
   height: 100%;
   position: absolute;
@@ -34,5 +36,5 @@ export const Parts = styled.div<PartsProps>`
   background-position: calc(0px - 180px * ${(props) => props.index});
   transition: 0s;
   filter: hue-rotate(calc(${(props) => props.hue} * 3.6deg)) saturate(calc(${(props) => props.sat}% * 2))
-    brightness(calc(${(props) => props.bri}% * 2)) contrast(calc(max(200% - ${(props) => props.bri}% * 2, 100%)));
+    brightness(calc(${(props) => props.bri}% * 2));
 `;
