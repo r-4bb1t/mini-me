@@ -19,10 +19,6 @@ export const Contents = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @media screen and (min-width: ${BREAKPOINT}px) {
-    max-width: 72rem;
-    flex-direction: row;
-  }
 `;
 
 export const ResultContainer = styled.div`
