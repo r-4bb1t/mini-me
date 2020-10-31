@@ -55,8 +55,10 @@ export const SaveButton = styled.button`
   border: none;
   background: #9af367;
   margin-bottom: 1rem;
-  :hover {
-    background: #7bc252;
+  @media (hover: hover) and (pointer: fine) {
+    :hover {
+      background: #7bc252;
+    }
   }
 `;
 

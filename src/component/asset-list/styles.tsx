@@ -34,8 +34,10 @@ export const Box = styled.div<BoxProps>`
   width: 6rem;
   height: 6rem;
   background-color: ${(props) => (props.isSelected ? "#9af367" : "white")};
-  :hover {
-    background: #7bc252;
+  @media (hover: hover) and (pointer: fine) {
+    :hover {
+      background: #7bc252;
+    }
   }
 `;
 
